@@ -57,3 +57,62 @@ footer {
   background: var(--accent);
   color: white;
 }
+/* === Animations === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Apply Animations === */
+header {
+  animation: slideDown 0.8s ease-out forwards;
+}
+
+.hero,
+#about,
+#work,
+#contact {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero {
+  animation-delay: 0.3s;
+}
+#about {
+  animation-delay: 0.6s;
+}
+#work {
+  animation-delay: 0.9s;
+}
+#contact {
+  animation-delay: 1.2s;
+}
+
+/* === Add a little hover styling === */
+nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+a {
+  transition: all 0.3s ease;
+}
