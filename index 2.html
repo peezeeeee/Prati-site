@@ -11,7 +11,8 @@
   <header>
     <div class="container">
       <h1>Pratibha Zala</h1>
-      <nav>
+      <div class="menu-toggle" id="menu-toggle">&#8942;</div>
+      <nav id="nav-links" class="hidden">
         <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -30,7 +31,6 @@
       <h2>Download My CV</h2>
       <p>You can view or download my CV to learn more about my education and professional background.</p>
       <a class="button" href="./Cv-1.pdf" target="_blank" download>📄 View CV</a>
-
     </div>
   </section>
 
@@ -48,5 +48,12 @@
       <p>© 2025 Pratibha Zala</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function () {
+      const nav = document.getElementById('nav-links');
+      nav.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
