@@ -1,9 +1,9 @@
 
 :root {
-  --pink: #ff69b4;
-  --light-pink: #ffe4ec;
+  --beige: #f9f6f2;
+  --accent: #d9a88e;
   --text: #333;
-  --background: #fff;
+  --header-bg: #e4dcd4;
 }
 
 * {
@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--background);
+  background: var(--beige);
   color: var(--text);
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -27,8 +27,8 @@ body {
 }
 
 header {
-  background: var(--pink);
-  color: white;
+  background: var(--header-bg);
+  color: var(--text);
   padding: 1rem 0;
   position: sticky;
   top: 0;
@@ -37,17 +37,23 @@ header {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header h1 {
   font-size: 1.6rem;
 }
 
 nav {
-  margin-top: 0.5rem;
+  display: flex;
+  gap: 1.2rem;
 }
 
 nav a {
-  color: white;
-  margin-right: 1.2rem;
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
@@ -57,15 +63,20 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
 .hero {
   text-align: center;
-  background: var(--light-pink);
   padding: 4rem 1rem;
 }
 
 .hero h2 {
   font-size: 2rem;
-  color: var(--pink);
+  color: var(--accent);
   margin-bottom: 1rem;
 }
 
@@ -75,14 +86,14 @@ nav a:hover {
 
 .section h2 {
   font-size: 1.6rem;
-  color: var(--pink);
+  color: var(--accent);
   margin-bottom: 1rem;
 }
 
 a.button {
   display: inline-block;
   margin-top: 1rem;
-  background: var(--pink);
+  background: var(--accent);
   color: white;
   padding: 0.7rem 1.5rem;
   text-decoration: none;
@@ -92,25 +103,35 @@ a.button {
 }
 
 a.button:hover {
-  background: #e755a6;
+  background: #c6886c;
 }
 
 footer {
-  background: var(--pink);
-  color: white;
+  background: var(--header-bg);
+  color: var(--text);
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
   margin-top: 2rem;
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
-  header, .hero, .section, footer {
-    text-align: center;
+  .menu-toggle {
+    display: block;
   }
 
-  nav a {
-    display: inline-block;
-    margin: 0.5rem;
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  nav.hidden {
+    display: none;
+  }
+
+  header, .hero, .section, footer {
+    text-align: center;
   }
 }
