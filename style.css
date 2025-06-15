@@ -1,0 +1,116 @@
+
+:root {
+  --pink: #ff69b4;
+  --light-pink: #ffe4ec;
+  --text: #333;
+  --background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header {
+  background: var(--pink);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 1.6rem;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 1.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  background: var(--light-pink);
+  padding: 4rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+.section {
+  padding: 3rem 1rem;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  color: var(--pink);
+  margin-bottom: 1rem;
+}
+
+a.button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--pink);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+a.button:hover {
+  background: #e755a6;
+}
+
+footer {
+  background: var(--pink);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  header, .hero, .section, footer {
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem;
+  }
+}
